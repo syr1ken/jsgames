@@ -1,3 +1,27 @@
+@keyframes heartB {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.1);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.1);
+  }
+  0% {
+    transform: scale(1);
+  }
+}
+.heartB {
+  animation-name: heartB;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
 @font-face {
   font-family: "SourceCodePro-Regular";
   src: url("../fonts/SourceCodePro-Regular.eot");
@@ -6,7 +30,7 @@
   font-style: normal;
 }
 .container {
-  padding: 0 20%;
+  padding: 0 15%;
 }
 
 hr {
@@ -27,10 +51,123 @@ body {
   min-height: 100%;
 }
 
+a {
+  color: #d470ff;
+  text-decoration: none;
+}
+a:hover {
+  color: #d470ff;
+  text-decoration: none;
+}
+a:focus {
+  color: #d470ff;
+}
+
 .main {
   flex: 1 0 auto;
 }
 
 .footer {
   flex: 0 0 auto;
+}
+
+header .logo {
+  color: #d470ff;
+  font-size: 2rem;
+}
+header hr {
+  margin: 0;
+}
+header p {
+  margin-top: 0.1rem;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.main {
+  text-align: center;
+  padding-top: 2rem;
+}
+.main p {
+  padding-bottom: 2rem;
+  font-size: 1rem;
+}
+.main form {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.form-group {
+  margin: 0 0.5rem;
+}
+.form-group label {
+  font-size: 1rem;
+  display: block;
+}
+.form-group input {
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.heart-group {
+  padding: 0;
+  color: #d470ff;
+}
+.heart-icon {
+  position: relative;
+  font-size: 16rem;
+}
+.heart-icon:hover {
+  cursor: pointer;
+}
+.heart-result {
+  display: none;
+  color: #fff;
+  font-size: 3.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  -webkit-user-select: none;
+          user-select: none;
+}
+.heart-text_result {
+  max-width: 80%;
+  margin: 0 auto;
+  padding-top: 3rem;
+  font-size: 1rem;
+  -webkit-user-select: none;
+          user-select: none;
+}
+
+.active {
+  display: inline-block;
+}
+
+.footer p {
+  font-size: 0.8rem;
+  text-align: center;
+  color: #d470ff;
+}
+
+.red {
+  color: #FF1A1A;
+}
+
+.green {
+  color: #42ff9e;
+}
+
+@media (max-width: 768px) {
+  .main form {
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    padding: 0 3%;
+  }
 }

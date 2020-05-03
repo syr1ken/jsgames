@@ -1,3 +1,40 @@
+// Animations
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
++keyframes($name: heartB)
+    0%
+        transform: scale(1)
+    14%
+        transform: scale(1.1)
+    28%
+        transform: scale(1)
+    42%
+        transform: scale(1.1)
+    0%
+        transform: scale(1)
+
+.heartB
+  -webkit-animation-name: heartB
+  animation-name: heartB
+  -webkit-animation-duration: 3s
+  animation-duration: 3s
+  -webkit-animation-timing-function: ease-in-out
+  animation-timing-function: ease-in-out
+  animation-iteration-count: infinite
+
+// Mixins
+=sourceCodeProReg($fz: 1rem)
+    font-family: 'SourceCodePro-Regular', sans-serif
+    font-size: $fz
+
 // Fonts
 @font-face
     font-family: 'SourceCodePro-Regular'
@@ -6,24 +43,24 @@
     font-weight: normal
     font-style: normal
 
-// Mixins
-=sourceCodeProReg($fz: 1rem)
-    font-family: 'SourceCodePro-Regular', sans-serif
-    font-size: $fz
-
 // Colors
 $primary-gray: #E5E5E5
 $primary-purple: #d470ff
+$primary-red: #FF1A1A
+$primary-green: #42ff9e
 $white: #fff
 $text: #434343
 
 // Base
 .container
-    padding: 0 20%
+    padding: 0 15%
+
 hr
     border-color: $primary-gray
+
 html, body
     height: 100%
+
 body
     +sourceCodeProReg($fz: 1rem)
     font-size: 62.5%
@@ -32,6 +69,15 @@ body
     flex-direction: column
     min-height: 100%
 
+a
+    color: $primary-purple
+    text-decoration: none
+    &:hover
+        color: $primary-purple
+        text-decoration: none
+    &:focus
+        color: $primary-purple
+
 .main
     flex: 1 0 auto
 
@@ -39,3 +85,86 @@ body
     flex: 0 0 auto
 
 // Header
+// Header
+header
+    .logo
+        color: $primary-purple
+        font-size: 2rem
+    hr
+        margin: 0
+    p
+        margin-top: 0.1rem
+        font-size: 0.9rem
+        text-align: right
+
+.main
+    text-align: center
+    padding-top: 2rem
+    p
+        padding-bottom: 2rem
+        font-size: 1rem
+    form
+        display: flex
+        justify-content: center
+        padding-top: 3rem
+.form
+    &-group
+        margin: 0 0.5rem
+        label
+            font-size: 1rem
+            display: block
+        input
+            font-size: 0.8rem
+            padding: 0.5rem
+            margin-bottom: 1rem
+
+.heart
+    &-group
+        padding: 0
+        color: $primary-purple
+    &-icon
+        position: relative
+        font-size: 16rem
+        &:hover
+            cursor: pointer
+    &-result
+        display: none
+        color: $white
+        font-size: 3.5rem
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        pointer-events: none
+        user-select: none
+    &-text_result
+        max-width: 80%
+        margin: 0 auto
+        padding-top: 3rem
+        font-size: 1rem
+        user-select: none
+
+.active
+    display: inline-block
+
+// Footer
+.footer
+    p
+        font-size: 0.8rem
+        text-align: center
+        color: $primary-purple
+
+.red
+    color: $primary-red
+
+.green
+    color: $primary-green
+
+@media (max-width: 768px)
+    .main
+        form
+            display: block
+
+@media (max-width: 576px)
+    .container
+        padding: 0 3%
