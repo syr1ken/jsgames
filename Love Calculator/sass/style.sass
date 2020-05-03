@@ -1,0 +1,41 @@
+// Fonts
+@font-face
+    font-family: 'SourceCodePro-Regular'
+    src: url('../fonts/SourceCodePro-Regular.eot')
+    src: url('../fonts/SourceCodePro-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/SourceCodePro-Regular.woff2') format('woff2'), url('../fonts/SourceCodePro-Regular.woff') format('woff'), url('../fonts/SourceCodePro-Regular.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+
+// Mixins
+=sourceCodeProReg($fz: 1rem)
+    font-family: 'SourceCodePro-Regular', sans-serif
+    font-size: $fz
+
+// Colors
+$primary-gray: #E5E5E5
+$primary-purple: #d470ff
+$white: #fff
+$text: #434343
+
+// Base
+.container
+    padding: 0 20%
+hr
+    border-color: $primary-gray
+html, body
+    height: 100%
+body
+    +sourceCodeProReg($fz: 1rem)
+    font-size: 62.5%
+    color: $text
+    display: flex
+    flex-direction: column
+    min-height: 100%
+
+.main
+    flex: 1 0 auto
+
+.footer
+    flex: 0 0 auto
+
+// Header
