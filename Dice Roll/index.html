@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice roll</title>
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/animate.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">roll</div>
+        <hr>
+        <p>the dice</p>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <p>roll it</p>
+        <div id="d4" class="dice d4">
+          <img class="dice-img" src="img/d4/D4_1.png" alt="D4_1" side="1">
+          <img class="dice-img" src="img/d4/D4_2.png" alt="D4_2" side="2">
+          <img class="dice-img" src="img/d4/D4_3.png" alt="D4_3" side="3">
+          <img class="dice-img" src="img/d4/D4_4.png" alt="D4_4" side="4">
+        </div>
+        <div id="d6" class="dice d6">
+          <img class="dice-img active" src="img/d6/D6_1.png" alt="D6_1" side="1">
+          <img class="dice-img" src="img/d6/D6_2.png" alt="D6_2" side="2">
+          <img class="dice-img" src="img/d6/D6_3.png" alt="D6_3" side="3">
+          <img class="dice-img" src="img/d6/D6_4.png" alt="D6_4" side="4">
+          <img class="dice-img" src="img/d6/D6_5.png" alt="D6_5" side="5">
+          <img class="dice-img" src="img/d6/D6_6.png" alt="D6_6" side="6">
+        </div>
+        <div id="d8" class="dice d8">
+          <img class="dice-img" src="img/d8/D8_1.png" alt="D8_1" side="1">
+          <img class="dice-img" src="img/d8/D8_2.png" alt="D8_2" side="2">
+          <img class="dice-img" src="img/d8/D8_3.png" alt="D8_3" side="3">
+          <img class="dice-img" src="img/d8/D8_4.png" alt="D8_4" side="4">
+          <img class="dice-img" src="img/d8/D8_5.png" alt="D8_5" side="5">
+          <img class="dice-img" src="img/d8/D8_6.png" alt="D8_6" side="6">
+          <img class="dice-img" src="img/d8/D8_7.png" alt="D8_7" side="7">
+          <img class="dice-img" src="img/d8/D8_8.png" alt="D8_8" side="8">
+        </div>
+        <form action="#">
+          <select id="dice-select" class="dice-select">
+            <option value="d4">d4</option>
+            <option value="d6" selected>d6</option>
+            <option value="d8">d8</option>
+          </select>
+          <button id="roll" class="btn button">roll</button>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <hr>
+        <p>@syr1ken</p>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

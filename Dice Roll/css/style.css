@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "SourceCodePro-Regular";
+  src: url("../fonts/SourceCodePro-Regular.eot");
+  src: url("../fonts/SourceCodePro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/SourceCodePro-Regular.woff2") format("woff2"), url("../fonts/SourceCodePro-Regular.woff") format("woff"), url("../fonts/SourceCodePro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.container {
+  padding: 0 20%;
+}
+
+hr {
+  border-color: #E5E5E5;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "SourceCodePro-Regular", sans-serif;
+  font-size: 1rem;
+  font-size: 62.5%;
+  color: #434343;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+header .logo {
+  color: #FF1A1A;
+  font-size: 2rem;
+}
+header hr {
+  margin: 0;
+}
+header p {
+  margin-top: 0.1rem;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.main {
+  text-align: center;
+  padding-top: 3rem;
+}
+.main p {
+  padding-bottom: 2rem;
+  font-size: 1rem;
+}
+.main form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.main form select {
+  border-radius: 0.2rem;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  height: 2.5rem;
+  width: 10rem;
+}
+.main form button {
+  margin: 0;
+  border: 1px solid #FF1A1A;
+  color: #FF1A1A;
+  width: 10rem;
+}
+
+.dice-img {
+  display: none;
+}
+
+.active {
+  display: inline-block;
+}
+
+.footer p {
+  font-size: 0.8rem;
+  text-align: center;
+  color: #FF1A1A;
+}
